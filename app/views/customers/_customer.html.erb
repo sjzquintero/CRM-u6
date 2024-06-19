@@ -1,0 +1,16 @@
+
+<div class="customer-card border p-4 rounded-lg shadow-md bg-white">
+  <% if customer.image.attached? %>
+    <%= image_tag customer.image, class: "customer-image w-24 h-24 rounded-full mx-auto object-cover" %>
+  <% else %>
+    <div class="no-image w-24 h-24 rounded-full bg-gray-200 mx-auto flex items-center justify-center">
+      <span>No Image</span>
+    </div>
+  <% end %>
+  <div class="customer-info mt-4 text-center">
+    <h2 class="customer-name text-xl font-semibold"><%= customer.full_name %></h2>
+    <p class="customer-phone text-gray-600"><%= customer.phone_number %></p>
+    <p class="customer-email text-gray-600"><%= customer.email_address.present? ? customer.email_address : "No Email" %></p>
+    <p class="customer-notes text-gray-600 mt-2"><%= customer.notes %></p>
+  </div>
+</div>
