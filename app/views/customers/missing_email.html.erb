@@ -1,0 +1,10 @@
+<h1 class="text-3xl font-bold mb-4">Customers with Missing Email Addresses</h1>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+  <%= render @customers %>
+</div>
+
+<div class="mt-4">
+  <%= link_to 'Alphabetized Customers', alphabetized_customers_path, class: "text-blue-500 hover:underline mr-4" %>
+  <%= link_to 'All Customers', customers_path, class: "text-blue-500 hover:underline" %>
+</div>
